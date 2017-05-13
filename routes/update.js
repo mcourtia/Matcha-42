@@ -69,7 +69,8 @@ router.post('/', function(req, res) {
                 p5: result[0].p5,
                 co: result[0].co,
                 token: result[0].token,
-                bloc: result[0].bloc
+                bloc: result[0].bloc,
+                by: result[0].by
             };
             db.collection("users").updateOne({login: log}, data, function (error, result) {
                 if (error) throw error;

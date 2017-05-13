@@ -70,7 +70,8 @@ router.post('/', function(req, res) {
         p5: "uploads/miss.png",
         co: "",
         token: "",
-        bloc: []
+        bloc: [],
+        by: []
     };
 
     mongo.connect("mongodb://localhost/matcha", function(error, db) {
