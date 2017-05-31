@@ -39,7 +39,13 @@ router.post('/', function(req, res) {
         res.render('create.ejs', {error: "Veuillez remplir tous les champs"});
         return false;
     }
+
     var log = req.body.login;
+    if(!log.match(/^[0-9A-Za-z]+$/)) {
+        res.render('create.ejs', {error: "Le pseudo ne peut contenir que des lettres et des chiffres"});
+        return false;
+    }
+
     var nom = req.body.nom;
     var prenom = req.body.prenom;
     var email = req.body.email;

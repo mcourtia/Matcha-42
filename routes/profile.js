@@ -83,8 +83,7 @@ router.get('/', function(req, res) {
                     res.render("myprofile.ejs", {
                         res: result[0],
                         age: age,
-                        //city: resu.results[0].address_components[2].long_name
-                        city: "blbl"
+                        city: resu.results[0].address_components[2].long_name
                     });
                 });
             }
@@ -208,8 +207,7 @@ router.get('/:log', function(req, res) {
                 res.render("profile.ejs", {
                     res: result[0],
                     age: age,
-                    //city: resu.results[0].address_components[2].long_name,
-                    city: "blbl",
+                    city: resu.results[0].address_components[2].long_name,
                     love: like
                 });
             });
